@@ -27,6 +27,11 @@ Ce projet a pour but de **prédire la disponibilité des Vélib'** en utilisant 
    - Prédictions pour les prochaines 24h 🔮.
    - Stockage des résultats dans **Elasticsearch** (`index: velib_predictions`).
 
+# 📊 Importer le Dashboard Kibana
+
+Vous pouvez facilement importer le dashboard prédéfini en utilisant le fichier `kibana_dashboard.ndjson`.
+
+
 ---
 
 ## 🚀 **Démarrer le Projet en Local (Docker)**

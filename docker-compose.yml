@@ -53,6 +53,15 @@ services:
       xpack.security.enabled: false
     ports:
       - "9200:9200"
+      
+  elasticsearch-setup:
+    image: curlimages/curl:latest
+    container_name: elasticsearch_setup
+    depends_on:
+      - elasticsearch
+    volumes:
+      - ./setup_elasticsearch.sh:/setup_elasticsearch.sh
+    entrypoint: ["/bin/sh", "/setup_elasticsearch.sh"]
 
   kibana:
     image: docker.elastic.co/kibana/kibana:8.17.1
